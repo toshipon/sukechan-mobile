@@ -68,7 +68,7 @@ class DATABASE_CONFIG {
 	    'port' => 9200
 	);
 
-	public $default = array(
+	public $production = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'us-cdbr-east-03.cleardb.com',
@@ -80,17 +80,17 @@ class DATABASE_CONFIG {
 		// 'encoding' => 'utf8',
 	);
 
-	// public $default = array(
-	// 	'datasource' => 'Database/Mysql',
-	// 	'persistent' => false,
-	// 	'host' => 'localhost',
-	// 	'port' => 3305,
-	// 	'login' => 'root',
-	// 	'password' => 'root',
-	// 	'database' => 'sukechan',
-	// 	'prefix' => '',
-	// 	//'encoding' => 'utf8',
-	// );
+	public $development = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		'port' => 3305,
+		'login' => 'root',
+		'password' => 'root',
+		'database' => 'sukechan',
+		'prefix' => '',
+		//'encoding' => 'utf8',
+	);
 
 	// public $test = array(
 	// 	'datasource' => 'Database/Mysql',
