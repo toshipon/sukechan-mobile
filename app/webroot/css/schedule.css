@@ -5,7 +5,7 @@
 	padding: 25px;
 }
 .hero-unit h1 {
-	font-size: 15px;
+	font-size: 22px;
 }
 .lead {
 	font-size: 14px;
@@ -17,4 +17,19 @@
 
 dd {
 	margin: 0 0 0 20px;
+}
+
+#cadidate_add_section {
+	list-style: none;
+}
+#cadidate_add_section select {
+	width: 120px;
+	margin-right: 5px;
+}
+#cadidate_add_section select.time {
+	width: 80px;
+}
+
+.submit {
+	margin-top: 20px;
 }

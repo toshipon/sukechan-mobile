@@ -15,7 +15,7 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-$title = 'すけちゃんモバイル(beta)'
+$title = 'すけちゃん(beta)'
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,6 @@ $title = 'すけちゃんモバイル(beta)'
 		<?php echo $title ?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<?php
@@ -36,6 +35,8 @@ $title = 'すけちゃんモバイル(beta)'
 
 		echo $this->Html->css('schedule');
 	?>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -76,9 +77,7 @@ $title = 'すけちゃんモバイル(beta)'
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+	<?php //echo $this->element('sql_dump'); ?>
 	<?php
 		echo $this->fetch('script');
 	?>
