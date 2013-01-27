@@ -1,5 +1,19 @@
 @charset "utf-8";
 
+.hero-unit {
+	font-size: 16px;
+}
+.hero-unit h1 {
+	font-size: 24px;
+}
+.lead {
+	font-size: 14px;
+}
+
+.btn-large {
+	font-size: 16px;
+}
+
 dd {
 	margin: 0 0 0 20px;
 }
