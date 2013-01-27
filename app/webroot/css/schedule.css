@@ -33,3 +33,13 @@ dd {
 .submit {
 	margin-top: 20px;
 }
+
+/*　スケジュールの参照 */
+#schedule_scrollable_section {
+	overflow-x: auto;
+}
+
+/* 予定の登録 */
+#answer_add_section .answer_select {
+	width: 50px;
+}

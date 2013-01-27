@@ -10,7 +10,7 @@
       <ul id="cadidate_add_section">
         <li>
           <?php
-            echo $this->Form->select('CandidateDate.0.date', $date);
+            echo $this->Form->select('CandidateDate.0.date', $date, array('class' => 'date'));
             echo $this->Form->select('CandidateDate.0.time', $time, array('class' => 'time'));
           ?>
         </li>
@@ -28,8 +28,10 @@
       var $ul = $('#cadidate_add_section');
       var size = $ul.find('li').length;
       var $li = $ul.find('li:last').clone();
-      var name = $li.find('select').attr('name').replace('['+(size-1)+']', '['+size+']');
-      $li.find('select').attr('name', name);
+      var dateName = $li.find('select.date').attr('name').replace('['+(size-1)+']', '['+size+']');
+      $li.find('select.date').attr('name', dateName);
+      var timeName = $li.find('select.time').attr('name').replace('['+(size-1)+']', '['+size+']');
+      $li.find('select.time').attr('name', timeName);
       $ul.append($li);
     })
   });

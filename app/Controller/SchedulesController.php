@@ -16,7 +16,6 @@ class SchedulesController extends AppController {
 			$data['rand_url_key'] = $this->get_rand_url_key();
 
 			if ($this->Schedule->save($data)) {
-
 				foreach ($this->request->data['CandidateDate'] as $candidate) {
 					$this->CandidateDate = new CandidateDate();
 					$candidate['schedule_id'] = $this->Schedule->id;
