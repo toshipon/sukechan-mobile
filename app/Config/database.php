@@ -59,7 +59,7 @@
  */
 class DATABASE_CONFIG {
 
-	public $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
+	// public $url = parse_url(getenv('CLEARDB_DATABASE_URL'));
 
     public $index = array(
 	    'datasource' => 'Elastic.ElasticSource',
@@ -72,7 +72,7 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'us-cdbr-east-03.cleardb.com',
-		'port' => 3305,
+		'port' => 3306,
 		'login' => 'b2f11b5e3b5417',
 		'password' => 'd473cf06',
 		'database' => 'heroku_00330720bd2ddb9',
