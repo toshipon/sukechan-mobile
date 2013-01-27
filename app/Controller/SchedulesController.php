@@ -72,8 +72,8 @@ class SchedulesController extends AppController {
 				'Schedule.rand_url_key' => $key
 			)
 		);
-		$schedule = $this->Schedule->find('first', $conditions)["Schedule"];
-		$this->set('schedule', $schedule);
+		$schedule = $this->Schedule->find('first', $conditions);
+		$this->set('schedule', $schedule["Schedule"]);
 
 		$this->set_schedule_detail_info($id);
 		$this->set('weeks', array('月', '火', '水', '木', '金', '土', '日'));
