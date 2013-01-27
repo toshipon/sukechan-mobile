@@ -22,8 +22,7 @@ $title = 'すけちゃんモバイル(beta)'
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $title ?>:
-		<?php echo $title_for_layout; ?>
+		<?php echo $title ?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -47,7 +46,7 @@ $title = 'すけちゃんモバイル(beta)'
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/"><?php echo $title ?></a>
+          <a class="brand" href="/"><i class="icon-calendar"></i><?php echo $title ?></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="/">トップ</a></li>
