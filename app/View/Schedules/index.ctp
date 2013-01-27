@@ -7,6 +7,8 @@
 	<p class="lead">何かご要望がありましたら<a href="http://wwww.twitter.com/toshipon">こちら(@toshipon)</a>までご連絡いただければと思います。</p>
 	<p><b>TODO</b></p>
 	<ul>
+		<li>編集・削除機能</li>
+		<li>テスト</li>	
 		<li>Elasticsearchを使って検索を高速化</li>
 		<li>CoffeeScriptとSassを使ってコードを綺麗にする</li>
 		<li>脱あからさまなbootstrapデザイン</li>

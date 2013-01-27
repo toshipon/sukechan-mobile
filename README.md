@@ -13,6 +13,8 @@ http://sukechan.herokuapp.com/
 TODO
 ------------
 
+* 編集・削除機能
+* テスト
 * Elasticsearchを使って検索を高速化
 * CoffeeScriptとSassを使ってコードを綺麗にする
 * 脱あからさまなbootstrapデザイン
