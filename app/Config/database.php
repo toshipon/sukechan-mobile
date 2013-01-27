@@ -77,7 +77,7 @@ class DATABASE_CONFIG {
 		'password' => 'd473cf06',
 		'database' => 'heroku_00330720bd2ddb9',
 		'prefix' => '',
-		'encoding' => 'utf8',
+		// 'encoding' => 'utf8',
 	);
 
 	// public $default = array(
