@@ -1,0 +1,67 @@
+<?php
+
+class MembersController extends AppController {
+
+	public function index() {
+	}
+
+	public function add() {
+		App::import('Model', 'Answer');
+
+		if ($this->request->is('post')) {
+
+			$this->Member->create();
+			$data = $this->request->data['Member'];
+
+			if ($this->Member->save($data)) {
+
+				foreach ($this->request->data['Answer'] as $answer) {
+					$this->Answer = new Answer();
+					$this->Answer->save($answer);
+				}
+
+				$this->Session->setFlash(__('予定の登録が完了しました。'));
+				$this->redirect(array(
+					'controller' => 'schedules', 
+					'action' => 'view/' . $data['schedule_id'] . '/' . $data['rand_url_key']
+				));
+			} else {
+				$this->Session->setFlash(__('予定の登録に失敗しました。'));
+			}
+		}
+	}
+
+
+	public function view() {
+		$id = $this->params['id'];
+		$key = $this->params['key'];
+
+		if ($id == '' || $key == '') {
+			$this->redirect(array('action' => 'index'));
+		}
+
+		$conditions = array(
+			'conditions' => array(
+				'Schedule.id' => $id,
+				'Schedule.rand_url_key' => $key
+			)
+		);
+		$schedule = $this->Schedule->find('first', $conditions)["Schedule"];
+		$this->set('schedule', $schedule);
+
+		App::import('Model', 'CandidateDate');
+		$this->CandidateDate = new CandidateDate();
+		$conditions = array(
+			'conditions' => array(
+				'CandidateDate.schedule_id' => $schedule['id']
+			)
+		);
+		$candidateDates = $this->CandidateDate->find('all', $conditions);
+		if ($candidateDates == null) {
+			$candidateDates = array();
+		}
+		$this->set('candidateDates', $candidateDates);
+
+		$this->set('weeks', array('月', '火', '水', '木', '金', '土', '日'));
+	}
+}

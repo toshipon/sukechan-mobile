@@ -1,0 +1,3 @@
+[submodule "app/Plugin/Elastic"]
+	path = app/Plugin/Elastic
+	url = git://github.com/dkullmann/CakePHP-Elastic-Search-DataSource.git
