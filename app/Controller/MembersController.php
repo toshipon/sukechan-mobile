@@ -46,14 +46,14 @@ class MembersController extends AppController {
 				'Schedule.rand_url_key' => $key
 			)
 		);
-		$schedule = $this->Schedule->find('first', $conditions)["Schedule"];
-		$this->set('schedule', $schedule);
+		$schedule = $this->Schedule->find('first', $conditions);
+		$this->set('schedule', $schedule["Schedule"]);
 
 		App::import('Model', 'CandidateDate');
 		$this->CandidateDate = new CandidateDate();
 		$conditions = array(
 			'conditions' => array(
-				'CandidateDate.schedule_id' => $schedule['id']
+				'CandidateDate.schedule_id' => $schedule["Schedule"]['id']
 			)
 		);
 		$candidateDates = $this->CandidateDate->find('all', $conditions);
