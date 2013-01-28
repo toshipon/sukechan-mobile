@@ -2,11 +2,12 @@
 
 class MembersController extends AppController {
 
+	public $hasMany = array('CandidateDate', 'Member');
+
 	public function index() {
 	}
 
 	public function add() {
-		App::import('Model', 'Answer');
 
 		if ($this->request->is('post')) {
 
@@ -49,8 +50,6 @@ class MembersController extends AppController {
 		$schedule = $this->Schedule->find('first', $conditions);
 		$this->set('schedule', $schedule["Schedule"]);
 
-		App::import('Model', 'CandidateDate');
-		$this->CandidateDate = new CandidateDate();
 		$conditions = array(
 			'conditions' => array(
 				'CandidateDate.schedule_id' => $schedule["Schedule"]['id']

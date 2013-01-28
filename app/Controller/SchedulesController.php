@@ -68,10 +68,13 @@ class SchedulesController extends AppController {
 		$conditions = array(
 			'conditions' => array(
 				'Schedule.id' => $id,
-				'Schedule.rand_url_key' => $key
+				'Schedule.rand_url_key LIKE' => $key
 			)
 		);
 		$schedule = $this->Schedule->find('first', $conditions);
+		if ($schedule == null) {
+			$this->redirect(array('action' => 'index'));
+		}
 		$this->set('schedule', $schedule["Schedule"]);
 
 		$this->set_schedule_detail_info($id);
